@@ -1,2 +1,233 @@
-body h1 {
-  background-color: #fff; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End hide from IE-mac */
+body {
+  background-image: url('../assets/bg.jpg'); }
+
+div.header {
+  position: relative;
+  height: 63px;
+  width: 100%;
+  background-color: white; }
+  @media only screen and (min-width: 790px) {
+    div.header {
+      background-image: url('../assets/header_bg.svg');
+      background-repeat: no-repeat;
+      background-position: center; } }
+  div.header #logo-image {
+    background-image: url('../assets/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+    height: 55px;
+    width: 121px; }
+    @media only screen and (min-width: 790px) {
+      div.header #logo-image {
+        background-image: url('../assets/logo.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 45px;
+        width: 104px;
+        margin: auto; } }
+  div.header a {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #F2764A;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    color: #AE3A22;
+    line-height: 30px; }
+    @media only screen and (min-width: 790px) {
+      div.header a:hover {
+        background-color: #EF4E26;
+        color: white; } }
+  div.header h1 {
+    display: none; }
+
+div.menu-bar {
+  width: 100%;
+  height: 45px;
+  background-color: #3A3A3C;
+  text-align: center; }
+  div.menu-bar li {
+    width: 33%;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    color: #818285;
+    line-height: 45px; }
+    @media only screen and (min-width: 790px) {
+      div.menu-bar li {
+        width: auto;
+        float: none;
+        display: inline-block; }
+        div.menu-bar li:first-child:before {
+          display: none; }
+        div.menu-bar li:before {
+          content: " ";
+          width: 5px;
+          height: 5px;
+          display: inline-block;
+          background-color: #888;
+          position: relative;
+          margin-right: 12px;
+          margin-left: 5px;
+          border-radius: 100%;
+          box-sizing: border-box;
+          top: -7px; }
+        div.menu-bar li:hover {
+          color: #E05734; } }
+    div.menu-bar li:nth-child(2) {
+      border-left: 2px solid #818285;
+      border-right: 2px solid #818285; }
+      @media only screen and (min-width: 790px) {
+        div.menu-bar li:nth-child(2) {
+          border: none; } }
+
+@media only screen and (min-width: 790px) {
+  div#gridHolder ul.animal-holder {
+    margin: auto;
+    max-width: 782px; } }
+
+div#gridHolder ul.animal-holder li.animals {
+  max-width: 457px;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 13px;
+  padding: 24px;
+  font-family: 'Lato', sans-serif;
+  border: 4px solid transparent; }
+  @media only screen and (min-width: 790px) {
+    div#gridHolder ul.animal-holder li.animals {
+      box-sizing: border-box;
+      width: 46%;
+      height: 399px;
+      float: left;
+      margin: 3% 2%; }
+      div#gridHolder ul.animal-holder li.animals:hover {
+        border: 4px solid #F58A2A; } }
+  div#gridHolder ul.animal-holder li.animals .animalsImageHeader {
+    background-image: url('http://placekitten.com/410/250');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    display: block;
+    max-width: 100%;
+    height: 250px; }
+    @media only screen and (min-width: 790px) {
+      div#gridHolder ul.animal-holder li.animals .animalsImageHeader {
+        height: 169px; } }
+  div#gridHolder ul.animal-holder li.animals .text-content {
+    margin-top: 20px;
+    width: 100%; }
+    div#gridHolder ul.animal-holder li.animals .text-content h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.7em;
+      color: #333335; }
+      @media only screen and (min-width: 790px) {
+        div#gridHolder ul.animal-holder li.animals .text-content h1 {
+          font-size: 1.3em; } }
+    div#gridHolder ul.animal-holder li.animals .text-content li {
+      float: left;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: 1.15em;
+      color: #848689; }
+      @media only screen and (min-width: 790px) {
+        div#gridHolder ul.animal-holder li.animals .text-content li {
+          padding-top: 8px;
+          font-size: .9em;
+          padding-bottom: 0px; } }
+      div#gridHolder ul.animal-holder li.animals .text-content li span {
+        margin: 0px 5px; }
+    div#gridHolder ul.animal-holder li.animals .text-content p {
+      color: #333335;
+      line-height: 25px;
+      font-size: 1.2em; }
+      @media only screen and (min-width: 790px) {
+        div#gridHolder ul.animal-holder li.animals .text-content p {
+          padding-top: 15px;
+          font-size: .9em;
+          line-height: 20px; } }
+
+@media only screen and (min-width: 1000px) {
+  div#footer {
+    width: 100%;
+    height: 45px;
+    background-color: #323234; }
+    div#footer div#social-media {
+      width: 75px;
+      margin: auto;
+      padding-top: 10px; }
+      div#footer div#social-media div#facebook {
+        background-image: url('../assets/facebook_grey.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 25px;
+        width: 25px;
+        display: inline-block; }
+      div#footer div#social-media div#instagram {
+        background-image: url('../assets/instagram_grey.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 25px;
+        width: 25px;
+        display: inline-block; }
+        div#footer div#social-media div#instagram:hover {
+          background-image: url('../assets/instagram_orange.svg'); } }

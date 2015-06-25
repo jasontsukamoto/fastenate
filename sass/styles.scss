@@ -1,5 +1,240 @@
+//Resets, Clearfix, etc
+//import reset and clearfix
+@import 'partials/reset';
+
+//variables
+$latoFont: 'Lato', sans-serif;
+$oswaldFont: 'Oswald', sans-serif;
+
+//Media Query Ranges
+$medium: "only screen and (min-width: 790px)";
+$footer: "only screen and (min-width: 1000px)";
+//Mixins
+
+//styles
 body {
+  background-image: url('../assets/bg.jpg');
+}
+
+div.header {
+  position: relative;
+  height: 63px;
+  width: 100%;
+  background-color: white;
+  @media #{$medium}{
+    background-image: url('../assets/header_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #logo-image {
+    background-image: url('../assets/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+    height: 55px;
+    width: 121px;
+    @media #{$medium}{
+      background-image: url('../assets/logo.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height:45px;
+      width: 104px;
+      margin: auto;
+    }
+  }
+
+  a {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #F2764A;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    color: #AE3A22;
+    line-height: 30px;
+    @media #{$medium}{
+      &:hover{
+        background-color: #EF4E26;
+        color: white;
+      }
+    }
+  }
+
   h1 {
-    background-color: #fff;
+    display: none;
+  }
+}
+
+div.menu-bar {
+  width: 100%;
+  height: 45px;
+  background-color: #3A3A3C;
+  text-align: center;
+    li {
+      width: 33%;
+      float: left;
+      font-family: $oswaldFont;
+      font-size: 1.2em;
+      color: #818285;
+      line-height: 45px;
+      @media #{$medium}{
+        width: auto;
+        float: none;
+        display: inline-block;
+        &:first-child{
+          &:before{
+            display: none;
+          }
+        }
+        &:before{
+          content: " ";
+          width: 5px;
+          height: 5px;
+          display: inline-block;
+          background-color: #888;
+          position: relative;
+          margin-right: 12px;
+          margin-left: 5px;
+          border-radius: 100%;
+          box-sizing:border-box;
+          top: -7px;
+        }
+        &:hover {
+          color: #E05734;
+        }
+      }
+
+      &:nth-child(2) {
+        border-left: 2px solid #818285;
+        border-right: 2px solid #818285;
+        @media #{$medium}{
+          border: none;
+        }
+      }
+    }
+  }
+
+div#gridHolder ul.animal-holder {
+  @media #{$medium} {
+    margin:auto;
+    max-width: 782px;
+  }
+
+
+}
+
+div#gridHolder ul.animal-holder li.animals {
+
+  max-width: 457px;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 13px;
+  padding: 24px;
+  font-family: $latoFont;
+  border: 4px solid transparent;
+  @media #{$medium}{
+    box-sizing: border-box;
+    width: 46%;
+    height: 399px;
+    float: left;
+    margin: 3% 2%;
+    &:hover {
+      border: 4px solid #F58A2A;
+    }
+  }
+  .animalsImageHeader {
+    background-image: url('http://placekitten.com/410/250');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    display: block;
+    max-width: 100%;
+    height: 250px;
+    @media #{$medium} {
+      height: 169px;
+    }
+  }
+  .text-content {
+    margin-top: 20px;
+    width: 100%;
+      h1{
+        font-family: $oswaldFont;
+        font-size: 1.7em;
+        color: #333335;
+        @media #{$medium}{
+          font-size: 1.3em;
+        }
+      }
+
+
+      li {
+        float: left;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 1.15em;
+        color: #848689;
+        @media #{$medium}{
+          padding-top: 8px;
+          font-size: .9em;
+          padding-bottom:0px;
+        }
+
+        span {
+          margin: 0px 5px;
+        }
+      }
+
+      p {
+        color: #333335;
+        line-height: 25px;
+        font-size: 1.2em;
+        @media #{$medium}{
+          padding-top: 15px;
+          font-size: .9em;
+          line-height: 20px;
+        }
+      }
+  }
+}
+
+
+
+
+div#footer {
+  @media #{$footer}{
+    width: 100%;
+    height: 45px;
+    background-color: #323234;
+    div#social-media {
+      width: 75px;
+      margin: auto;
+      padding-top: 10px;
+      div#facebook {
+        background-image: url('../assets/facebook_grey.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+      }
+      div#instagram {
+        background-image: url('../assets/instagram_grey.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        &:hover {
+          background-image: url('../assets/instagram_orange.svg');
+        }
+      }
+    }
   }
 }
